@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GetBack2Work" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-T0-xDf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="strv_logo" translatesAutoresizingMaskIntoConstraints="NO" id="JBx-kE-NME">
+                                <rect key="frame" x="264" y="562" width="72" height="22"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="main_title" translatesAutoresizingMaskIntoConstraints="NO" id="Fan-iz-aSA">
+                                <rect key="frame" x="187" y="245" width="227" height="110"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Ready!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiV-2O-Smw">
+                                <rect key="frame" x="244" y="387" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bVu-T0-xDf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Yhp-AY-F73"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="JBx-kE-NME" secondAttribute="bottom" constant="16" id="a1F-WE-dqB"/>
+                            <constraint firstAttribute="centerX" secondItem="JBx-kE-NME" secondAttribute="centerX" id="bQy-ZL-CdU"/>
+                            <constraint firstAttribute="trailing" secondItem="bVu-T0-xDf" secondAttribute="trailing" id="c29-nk-l4J"/>
+                            <constraint firstAttribute="centerX" secondItem="eiV-2O-Smw" secondAttribute="centerX" id="eNn-rQ-ZWE"/>
+                            <constraint firstAttribute="bottom" secondItem="bVu-T0-xDf" secondAttribute="bottom" id="fZY-V3-Lqe"/>
+                            <constraint firstItem="eiV-2O-Smw" firstAttribute="top" secondItem="Fan-iz-aSA" secondAttribute="bottom" constant="32" id="jxL-A7-WXS"/>
+                            <constraint firstAttribute="centerY" secondItem="Fan-iz-aSA" secondAttribute="centerY" id="nTm-ga-eMx"/>
+                            <constraint firstAttribute="centerX" secondItem="Fan-iz-aSA" secondAttribute="centerX" id="xLQ-Aq-1TC"/>
+                            <constraint firstItem="bVu-T0-xDf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zRr-iz-cRy"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Yv4-Eh-Z37" appends="YES" id="aYM-tb-NXc"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="eiV-2O-Smw" id="Psi-my-Pvd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Yv4-Eh-Z37">
+                    <connections>
+                        <action selector="handleTap:" destination="vXZ-lx-hvc" id="Paq-uP-KwJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="375" height="667"/>
+        <image name="main_title" width="227" height="110"/>
+        <image name="strv_logo" width="72" height="22"/>
+    </resources>
+</document>
